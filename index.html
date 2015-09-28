@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no" />
+	<title>Document</title>
+	<style>
+		.a{
+			background-color: #aaa;
+			width: 50px;
+			height: 50px;
+			left: 200px;
+			top: 300px;
+			z-index:12;
+			position: absolute;
+		}
+		.b{
+			background-color: #ff0;
+			width: 100px;
+			height: 100px;
+			left: 100px;
+			top:50px;
+			position: absolute;
+		}
+		.test{
+			width: 200px;
+			height: 200px;
+			background-color: '#000';
+		}
+		.testb{
+			border: 1px solid red;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="a" id="drag"></div>
+	<div class="b" id="dragb"></div>
+	<script src="./js/drag.js"></script>
+	<script>
+	/*
+	*	drag 拖拽组件 
+	*	@class Drag
+	*	@param {string} targ		需要拖拽的元素
+	*	@param {object} dbclick		双击改变拖拽元素样式
+	*	@param {string} enterTart	进入指定容器的元素
+	*	@param {object} enterClass	进入指定容器改变其样式，必须设置指定容器
+	*
+	*
+	*
+	*
+	*
+	*
+	*/
+
+
+		new Drag({
+			targ: 'drag',
+			enterTart: 'dragb',
+			enterClass: {
+				className: 'testb'
+			}
+		})
+	</script>
+</body>
+</html>
